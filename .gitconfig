@@ -1,0 +1,25 @@
+[user]
+	name = João Vitor Retamero
+	email = joaoretamero@gmail.com.br
+[core]
+	longpaths = true
+	autocrlf = input
+[merge]
+	renamelimit = 999999
+	conflictstyle = diff3
+[log]
+	date = iso8601
+[alias]
+	slog = log -20 --pretty=format:'%C(yellow)%h %C(cyan)(%ai) %Cgreen[%an] %C(magenta)%d %Creset%f'
+	cbranch = rev-parse --abbrev-ref HEAD
+	mergeb = !git merge origin/$(git rev-parse --abbrev-ref HEAD)
+	fetchb = !git fetch origin $(git rev-parse --abbrev-ref HEAD)
+	pullb = !git pull origin $(git rev-parse --abbrev-ref HEAD)
+	rebaseb = !git rebase origin/$(git rev-parse --abbrev-ref HEAD)
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	cleanup = !git branch | grep -v "$(git rev-parse --abbrev-ref HEAD)" | xargs git branch -D
+[fetch]
+	prune = true
+[push]
+	default = current
