@@ -1,17 +1,35 @@
 {
-    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0,
+    
+    "workbench.startupEditor": "none",
+    "workbench.list.openMode": "doubleClick",
+    
     "gitlens.codeLens.enabled": false,
     "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss",
     "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
+    
     "FSharp.autoRevealInExplorer": "disabled",
+    
+    "explorer.confirmDelete": false,
+    
     "editor.renderWhitespace": "all",
+    "editor.detectIndentation": false,
     "editor.fontFamily": "Fira Code",
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
-    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.snippetSuggestions": "none",
     "editor.quickSuggestions": {
         "other": false,
         "comments": false,
         "strings": false
+    },
+    
+    "javascript.updateImportsOnFileMove.enabled": "prompt",
+    "typescript.updateImportsOnFileMove.enabled": "prompt",
+    
+    "[sass]": {
+        "editor.defaultFormatter": "syler.sass-indented"
     }
 }
