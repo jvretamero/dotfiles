@@ -1,25 +1,45 @@
-[user]
-	name = João Vitor Retamero
-	email = joaoretamero@gmail.com.br
 [core]
-	longpaths = true
-	autocrlf = input
+  longpaths = true
+  autocrlf = true
+[interactive]
+  diffFilter = delta --color-only
 [merge]
-	renamelimit = 999999
-	conflictstyle = diff3
+  renamelimit = 999999
+  conflictstyle = diff3
+[diff]
+  colorMoved = default
 [log]
-	date = iso8601
+  date = iso8601
 [alias]
-	slog = log -20 --pretty=format:'%C(yellow)%h %C(cyan)(%ai) %Cgreen[%an] %C(magenta)%d %Creset%f'
-	cbranch = rev-parse --abbrev-ref HEAD
-	mergeb = !git merge origin/$(git rev-parse --abbrev-ref HEAD)
-	fetchb = !git fetch origin $(git rev-parse --abbrev-ref HEAD)
-	pullb = !git pull origin $(git rev-parse --abbrev-ref HEAD)
-	rebaseb = !git rebase origin/$(git rev-parse --abbrev-ref HEAD)
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	cleanup = !git branch | grep -v "$(git rev-parse --abbrev-ref HEAD)" | xargs git branch -D
+  slog = log -20 --pretty=format:'%C(yellow)%H %C(cyan)(%ai) %Cgreen[%an] %C(magenta)%d %Creset%s'
+  cbranch = rev-parse --abbrev-ref HEAD
+  fetchb = !git fetch origin $(git cbranch)
+  pullb = !git pull origin $(git cbranch)
+  rpush = !git pullb --rebase && git push
+  rebaseb = !git rebase origin/$(git cbranch)
+  unstage = reset HEAD --
+  last = slog -1 HEAD
+  cleanup = !git branch | grep -v "$(git cbranch)" | xargs git branch -D
+  hclean = !git reset --hard && git clean -fd
+  sshow = show --name-status --no-renames
+  cpn = cherry-pick -n
+  cp = cherry-pick
+  msg = show --format=oneline --stat
 [fetch]
-	prune = true
+  prune = true
 [push]
-	default = current
+  default = current
+[color "diff"]
+  meta = "yellow bold"
+  commit = "green bold"
+  frag = "magenta bold"
+  old = "red bold"
+  new = "green bold"
+  whitespace = "red reverse"
+[color "diff-highlight"]
+  oldNormal = "red bold"
+  oldHighlight = "red bold 52"
+  newNormal = "green bold"
+  newHighlight = "green bold 22"
+[include]
+  path = ~/.gitconfig.include
