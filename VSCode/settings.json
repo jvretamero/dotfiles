@@ -1,35 +1,47 @@
 {
-    "window.zoomLevel": 0,
-    
-    "workbench.startupEditor": "none",
-    "workbench.list.openMode": "doubleClick",
-    
-    "gitlens.codeLens.enabled": false,
-    "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss",
-    "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
-    
-    "FSharp.autoRevealInExplorer": "disabled",
-    
-    "explorer.confirmDelete": false,
-    
-    "editor.renderWhitespace": "all",
-    "editor.detectIndentation": false,
     "editor.fontFamily": "Fira Code",
-    "editor.fontSize": 14,
     "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.renderWhitespace": "all",
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.scrollBeyondLastColumn": 1,
     "editor.acceptSuggestionOnEnter": "off",
     "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.snippetSuggestions": "none",
     "editor.quickSuggestions": {
         "other": false,
         "comments": false,
         "strings": false
     },
-    
-    "javascript.updateImportsOnFileMove.enabled": "prompt",
-    "typescript.updateImportsOnFileMove.enabled": "prompt",
-    
-    "[sass]": {
-        "editor.defaultFormatter": "syler.sass-indented"
-    }
+    "diffEditor.ignoreTrimWhitespace": false,
+    "extensions.ignoreRecommendations": false,
+    "FSharp.autoRevealInExplorer": "disabled",
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "never",
+    "gitlens.codeLens.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.currentLine.scrollable": false,
+    "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss",
+    "gitlens.defaultDateShortFormat": "YYYY-MM-DD",
+    "security.workspace.trust.untrustedFiles": "open",
+    "update.showReleaseNotes": false,
+    "window.restoreWindows": "none",
+    "workbench.colorTheme": "Dracula",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.restoreViewState": false,
+    "workbench.startupEditor": "none",
+    "workbench.list.openMode": "doubleClick",
+    "[dart]": {
+        "editor.formatOnSave": false,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            120
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
 }
