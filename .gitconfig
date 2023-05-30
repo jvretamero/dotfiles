@@ -23,7 +23,7 @@
   hclean = !git reset --hard && git clean -fd
   sshow = show --name-status --no-renames
   cpn = cherry-pick -n
-  cp = cherry-pick
+  cp = "!git cherry-pick -n && git commit -m \"$(git show -s --pretty='%s' $1)\" #"
   msg = show --format=oneline --stat
 [fetch]
   prune = true
@@ -43,3 +43,5 @@
   newHighlight = "green bold 22"
 [include]
   path = ~/.gitconfig.include
+[credential "https://azure.geravd.com.br:9443"]
+	provider = generic
